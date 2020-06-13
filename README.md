@@ -14,6 +14,7 @@ NYUv2OC++ dataset [download link](https://drive.google.com/file/d/1Fk8uuH3oJJhyC
 - PyTorch >= 0.4
 - OpenCV
 - CUDA >= 8.0(Only tested with CUDA >= 8.0)
+- Easydict
 
 ## Data Preparation
 ```bash
