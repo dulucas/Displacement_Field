@@ -22,3 +22,16 @@ python train.py -d 0
 cd model/nyu/df_nyu_rgb_guidance
 python train.py -d 0
 ```
+### Citation
+```bash
+@InProceedings{Ramamonjisoa_2020_CVPR,
+author = {Ramamonjisoa, Michael and Du, Yuming and Lepetit, Vincent},
+title = {Predicting Sharp and Accurate Occlusion Boundaries in Monocular Depth Estimation Using Displacement Fields},
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
+}
+```
+
+### Acknowledgement
+This repo is based on [TorchSeg](https://github.com/ycszen/TorchSeg)
