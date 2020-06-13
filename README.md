@@ -1,6 +1,9 @@
 # Displacement_Field
 
+## Visualization
+### 1D
 ![1D](./figure/toy.png)
+### 2D
 ![2D](./figure/displacement_field.png)
 
 ## Requirements:
