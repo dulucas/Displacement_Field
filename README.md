@@ -1,5 +1,8 @@
 # Displacement_Field
 
+![1D](./figure/toy.png)
+![2D](./figure/displacement_field.png)
+
 ## Requirements:
 - PyTorch >= 0.4
 - OpenCV
