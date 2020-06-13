@@ -43,4 +43,5 @@ year = {2020}
 
 ## Acknowledgement
 The code is based on [TorchSeg](https://github.com/ycszen/TorchSeg)
+
 The NYUv2-OC++ is annotated manually by 4 Phd students major in computer vision. Special thanks to [Yang Xiao](https://youngxiao13.github.io/) and [Xuchong Qiu](https://imagine-lab.enpc.fr/staff-members/xuchong-qiu/) for their help in annotating the NYUv2-OC++ dataset.
