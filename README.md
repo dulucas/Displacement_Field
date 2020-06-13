@@ -34,4 +34,4 @@ year = {2020}
 ```
 
 ### Acknowledgement
-This repo is based on [TorchSeg](https://github.com/ycszen/TorchSeg)
+The code is based on [TorchSeg](https://github.com/ycszen/TorchSeg)
