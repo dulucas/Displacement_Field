@@ -1,5 +1,5 @@
 # Displacement_Field
-Official implementation of CVPR2020 paper predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields[link](https://arxiv.org/abs/2002.12730)
+Official implementation of CVPR2020 paper **Predicting Sharp and Accurate Occlusion Boundaries in Monocular Depth Estimation Using Displacement Fields** [paper link](https://arxiv.org/abs/2002.12730)
 
 ## Visualization
 ### 1D
