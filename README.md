@@ -8,5 +8,17 @@
 - CUDA >= 8.0(Only tested with CUDA >= 8.0)
 
 ### Data Preparation
-Download the NYUv2 dataset from here[http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat]
-Move the downloaded .mat file to 
+```bash
+sh download.sh
+```
+
+### Training
+```bash
+#Use depth only as input
+cd model/nyu/df_nyu_depth_only
+python train.py -d 0
+
+#Use RGB image as guidance
+cd model/nyu/df_nyu_rgb_guidance
+python train.py -d 0
+```
