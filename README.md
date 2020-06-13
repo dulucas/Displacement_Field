@@ -4,9 +4,10 @@ Official implementation of CVPR2020 paper **Predicting Sharp and Accurate Occlus
 ## Visualization
 ### 1D
 ![1D](./figure/toy.png)
+------
 ### 2D
 ![2D](./figure/displacement_field.png)
-
+------
 ## Requirements:
 - PyTorch >= 0.4
 - OpenCV
