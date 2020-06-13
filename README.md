@@ -2,10 +2,10 @@
 Official implementation of CVPR2020 paper **Predicting Sharp and Accurate Occlusion Boundaries in Monocular Depth Estimation Using Displacement Fields** [paper link](https://arxiv.org/abs/2002.12730)
 
 ## Visualization
-### 1D
+### 1D example
 ![1D](./figure/toy.png)
 ------
-### 2D
+### 2D example on blurry depth image(prediction of depth estimator)
 ![2D](./figure/displacement_field.png)
 ------
 ## Requirements:
