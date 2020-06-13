@@ -5,9 +5,6 @@ NYUv2OC++ dataset [download link](https://drive.google.com/file/d/1Fk8uuH3oJJhyC
 
 ## Visualization
 ### 1D example
-<p align="center">
-<img src="./figure/toy.png" width="800px" alt="teaser">
-</p>
 ![1D](./figure/toy.png)
 ------
 ### 2D example on blurry depth image(prediction of depth estimator)
