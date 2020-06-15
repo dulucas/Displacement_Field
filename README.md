@@ -42,6 +42,9 @@ year = {2020}
 }
 ```
 
+## Miscellaneous
+The model can be trained with only synthetic data([Scenenet](https://robotvault.bitbucket.io/scenenet-rgbd.html) for example), and generalize naturally on real data.
+
 ## Acknowledgement
 The code is based on [TorchSeg](https://github.com/ycszen/TorchSeg)
 
