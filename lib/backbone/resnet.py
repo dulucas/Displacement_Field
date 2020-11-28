@@ -111,7 +111,7 @@ class ResNet(nn.Module):
     def __init__(self, block, layers, num_classes=1000):
         super(ResNet, self).__init__()
         self.inplanes = 64
-        self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, #3 (RGB) * 7x7 * 64
+        self.conv1_ = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, #3 (RGB) * 7x7 * 64
                                bias=False)
         self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(inplace=True)
@@ -149,21 +149,22 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.conv1(x)
+        output = []
+        x = self.conv1_(x)
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
 
         x = self.layer1(x)
+        output.append(x)
         x = self.layer2(x)
+        output.append(x)
         x = self.layer3(x)
+        output.append(x)
         x = self.layer4(x)
+        output.append(x)
 
-        x = self.avgpool(x)
-        x = x.view(x.size(0), -1)
-        x = self.fc(x)
-
-        return x
+        return output
 
 
 def resnet18(pretrained=False, **kwargs):
@@ -173,7 +174,7 @@ def resnet18(pretrained=False, **kwargs):
     """
     model = ResNet(BasicBlock, [2, 2, 2, 2], **kwargs)
     if pretrained:
-        model.load_state_dict(model_zoo.load_url(model_urls['resnet18']))
+        model.load_state_dict(model_zoo.load_url(model_urls['resnet18']), strict=False)
     return model
 
 

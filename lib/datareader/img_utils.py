@@ -234,3 +234,19 @@ def updown_sampling(depth, scale, interpolation):
 
     return depth
 
+def generate_mask_by_shifting(depth, scale=1, kernel=10, step_size=1, delta=5):
+    if scale > 1:
+        depth = depth[::scale, ::scale]
+    affinities = np.zeros(depth.shape)
+
+    depth_pad = np.pad(depth, ((kernel//2, kernel//2), (kernel//2, kernel//2)), 'edge')
+    rows, cols = depth.shape[0], depth.shape[1]
+    for i in range(-(kernel//2), kernel//2 + 1, step_size):
+        for j in range(-(kernel//2), kernel//2 + 1, step_size):
+            if i == 0 and j == 0:
+                continue
+            affinities[max(i, 0):min(rows, rows+i), max(j, 0):min(cols, cols+j)] = \
+                    np.abs(depth_pad[max(-i, 0):min(rows, rows-i), max(-j, 0):min(cols, cols-j)] - depth[max(i, 0):min(rows, rows+i), max(j, 0):min(cols, cols+j)])
+
+    return 1-np.exp(-affinities**2 * delta)
+
